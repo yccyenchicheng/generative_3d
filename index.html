@@ -159,146 +159,95 @@
 
 
   
-        <title>Generative Transformers</title>
-        <meta property="og:title" content="Non-sequential Autoregressive Shape Priorsfor 3D Completion, Reconstruction and Generation">
-        
+  <title>Generative Transformers</title>
+
+    <meta property="og:title" content="Non-sequential Autoregressive Shape Priors for 3D Completion, Reconstruction and Generation">    
     <meta property="og:description" content=" Generative Transformers ">
+
   </head>
 
   <body>
     <br>
     <center>
-    <span style="font-size:42px">Non-sequential Autoregressive Shape Priorsfor 3D Completion, Reconstruction and Generation</span>
+    <span style="font-size:42px">Non-sequential Autoregressive Shape Priors for <br> 3D Completion, Reconstruction and Generation</span>
     </center>
 
-<br><br>
-<!--     <table align="center" width="900px">
-        <tbody><tr>
-        <td align="center">
-            <img src="./PixelTransformer_temp_files/approach.png" width="800px">
+    <br><br>
+
+    <table align="center" width="900px">
+      <tbody><tr>
+
+        <td align="center" width="100px">
+          <center>
+          <span style="font-size:20px"><a href="https://paritoshmittal12.github.io/">Paritosh Mittal</a><sup>* 1</sup></span>
+          </center>
         </td>
 
-    </tr></tbody></table>
-    <center>
-        <br>
-       <span style="font-size:14px" width="1000px"><i><b>Overview.</b> Left: Our model takes as input a set of observed pixel locations and values ({(<b>x</b><sub>k</sub>,<b>v</b><sub>k</sub>)}) and can then predict the value distribution for any query position <b>x</b>. Right: This model can be trained in a self-supervised manner by drawing random samples from training images and maximizing likelihood of true values for random query locations. Our approach allows us to autoregressively model distributions for many spatial signals (e.g. images, shapes, videos, polynomials) conditioned on a sparse set of sample observations (e.g. pixels)</i></span>
-     </center>
- -->
+       <td align="center" width="100px">
+        <center>
+        <span style="font-size:20px"><a href="https://yccyenchicheng.github.io/">Yen-Chi Cheng</a><sup>* 1</sup></span>
+        </center>
+       </td>
+  
+       <td align="center" width="100px">
+        <center>
+        <span style="font-size:20px"><a href="http://www.researchgate.net/profile/Maneesh_Singh5">Maneesh Singh</a><sup>2</sup></span>
+        </center>
+       </td>
 
-<br><hr><br>
-  <table align="center" width="1800px">
-    <tbody>
-      <tr>
-        <td align="center"; width="1500x", class="hor-shift-left">
-        <!-- <td align="center"; width="1080px"> -->
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02691156-1b90541c9d95d65d2b48e2e94b50fd01-2-x.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02691156-1b90541c9d95d65d2b48e2e94b50fd01-3-recon.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02828884-106494f75125eea6adf66a6d73888234-2-x.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02828884-106494f75125eea6adf66a6d73888234-3-recon.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02828884-52867aee1e2e137912a905e721b748f5-2-x.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02828884-52867aee1e2e137912a905e721b748f5-3-recon.gif">
-        </td>
-      </tr>
+       <td align="center" width="100px">
+        <center>
+        <span style="font-size:20px"><a href="https://shubhtuls.github.io/">Shubham Tulsiani</a><sup>1</sup></span>
+        </center>
+       </td>
+       
+      </tr></tbody>
+    </table>
 
-      <tr>
-        <td align="center"; width="1500x", class="hor-shift-left">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02933112-634fe05a380adac585430ccbd2632877-2-x.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02933112-634fe05a380adac585430ccbd2632877-3-recon.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03001627-1f8e18d42ddded6a4b3c42e318f3affc-2-x.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03001627-1f8e18d42ddded6a4b3c42e318f3affc-3-recon.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02933112-79a8b5fdd40e1b1d20768660cf080d12-2-x.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02933112-79a8b5fdd40e1b1d20768660cf080d12-3-recon.gif">
-        </td>
-      </tr>
+    <br>
 
-      <tr>
-        <td align="center"; width="1500x", class="hor-shift-left">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03636649-26f0f37f0f2623c4a3fa46ae73c48b4-2-x.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03636649-26f0f37f0f2623c4a3fa46ae73c48b4-3-recon.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/04256520-776e86412e7f3c6dffb78a7278f8e374-2-x.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/04256520-776e86412e7f3c6dffb78a7278f8e374-3-recon.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03211117-73669f92851d3b28eb34db531a289b8e-2-x.gif">
-          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03211117-73669f92851d3b28eb34db531a289b8e-3-recon.gif">
-        </td>
-      </tr>
+   <table align="center" width="800px">
+      <tbody>
+        <tr>
+          
+          <td align="center" width="200px">
+          <center>
+            <span style="font-size:20px"><sup>1</sup>Carnegie Mellon University</span>
+          </center>
+          </td>
+          
+          <td align="center" width="200px">
+          <center>
+            <span style="font-size:20px"><sup>2</sup>Verisk Analytics</span>
+          </center>
+          </td>
 
-    <tr><td align="center" class="hor-shift-left"><b>ShapeNet</b></td></tr>
-      
-    <tr>
-      <td align="center"; width="1500x", class="hor-shift-left">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-2-x.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-3-recon.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-2-x.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-3-recon.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/sofa-IKEA_EKTORP_1-0128-2-x.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/sofa-IKEA_EKTORP_1-0128-3-recon.gif">
-      </td>
-    </tr>
+        </tr>
+      </tbody>
+    </table>
+   
+  <br><br>
 
-    <tr><td align="center" class="hor-shift-left"><b>Pix3D</b></td></tr>
-    </tbody>
+  <table align="center" width="900px">
+    <tbody><tr>
+    
+    <td align="center">
+        <img src="./figs/generative3d_teaser.png" width="800px">
+    </td>
+
+    </tr></tbody>
   </table>
-
-  <br>
   <center>
-    <span style="font-size:14px;" width="1000px"><i><b>P-VQ-VAE's Reconstruction.</b> Left: Ground-truth. Right: Reconstruction.</i></span>
-  </center>
-  <br><hr><br>
+    <br>
 
-  <table align="center" width="1800px">
-    <tbody>
-      <tr>
-        <td align="center"; width="1600x", class="hor-shift-left">
-        <!-- <td align="center"; width="1080px"> -->
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0001-0-tf.gif">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0003-0-tf.gif">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0004-0-tf.gif">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0059-0-tf.gif">
-        </td>
-      </tr>
-
-      <tr>
-        <td align="center"; width="1600x", class="hor-shift-left">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0106-0-tf.gif">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0111-0-tf.gif">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0141-0-tf.gif">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0188-0-tf.gif">
-        </td>
-      </tr>
-
-      <tr>
-        <td align="center"; width="1600x", class="hor-shift-left">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0202-0-tf.gif">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0236-0-tf.gif">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0312-0-tf.gif">
-          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0319-0-tf.gif">
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
-
-  <br>
-  <center>
-    <span style="font-size:14px;" width="1000px"><i><b>Autoregressive Generation with the non-sequential transformer.</b></i></span>
-  </center>
-  <br><hr><br>
-
-  <table align="center" width="1800px">
-    <tbody>
-      <tr>
-        <td align="center"; width="1600x", class="hor-shift-left">
-        <!-- <td align="center"; width="1080px"> -->
-          <img style="max-width: 1024px; height: auto;" src="./shape_comp_baselines/shape_comp_baselines.png">
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
-
-  <br>
-  <center>
-    <span style="font-size:14px;" width="1000px"><i><b>Shape Completion: more comparisons with the competing methods.</b></i></span>
+    <span style="font-size:14px" width="1000px">
+      <i>
+        <b>Overview.</b> Our approach combines a non-sequential autoregressive prior for 3D shapes with task-specific conditionals <br>
+           to generate multiple plausible and high-quality shapes consistent with input conditioning. 
+           We show the efficacy of our approach across diverse tasks such as <br>
+           (Left) <b>shape completion</b>, (Middle) <b>single-view reconstruction</b> and (Right) <b>language-guided generation</b>. 
+      </i>
+    </span>
   </center>
   <br><hr><br>
 
@@ -667,5 +616,133 @@
     </center>
 
 <br><hr><br>
+
+<!-- <br><hr><br> -->
+  <table align="center" width="1800px">
+    <tbody>
+      <tr>
+        <td align="center"; width="1500x", class="hor-shift-left">
+        <!-- <td align="center"; width="1080px"> -->
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02691156-1b90541c9d95d65d2b48e2e94b50fd01-2-x.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02691156-1b90541c9d95d65d2b48e2e94b50fd01-3-recon.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02828884-106494f75125eea6adf66a6d73888234-2-x.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02828884-106494f75125eea6adf66a6d73888234-3-recon.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02828884-52867aee1e2e137912a905e721b748f5-2-x.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02828884-52867aee1e2e137912a905e721b748f5-3-recon.gif">
+        </td>
+      </tr>
+
+      <tr>
+        <td align="center"; width="1500x", class="hor-shift-left">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02933112-634fe05a380adac585430ccbd2632877-2-x.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02933112-634fe05a380adac585430ccbd2632877-3-recon.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03001627-1f8e18d42ddded6a4b3c42e318f3affc-2-x.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03001627-1f8e18d42ddded6a4b3c42e318f3affc-3-recon.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02933112-79a8b5fdd40e1b1d20768660cf080d12-2-x.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/02933112-79a8b5fdd40e1b1d20768660cf080d12-3-recon.gif">
+        </td>
+      </tr>
+
+      <tr>
+        <td align="center"; width="1500x", class="hor-shift-left">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03636649-26f0f37f0f2623c4a3fa46ae73c48b4-2-x.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03636649-26f0f37f0f2623c4a3fa46ae73c48b4-3-recon.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/04256520-776e86412e7f3c6dffb78a7278f8e374-2-x.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/04256520-776e86412e7f3c6dffb78a7278f8e374-3-recon.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03211117-73669f92851d3b28eb34db531a289b8e-2-x.gif">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/snet/03211117-73669f92851d3b28eb34db531a289b8e-3-recon.gif">
+        </td>
+      </tr>
+
+    <tr><td align="center" class="hor-shift-left"><b>ShapeNet</b></td></tr>
+      
+    <tr>
+      <td align="center"; width="1500x", class="hor-shift-left">
+        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-2-x.gif">
+        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-3-recon.gif">
+        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-2-x.gif">
+        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-3-recon.gif">
+        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/sofa-IKEA_EKTORP_1-0128-2-x.gif">
+        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/sofa-IKEA_EKTORP_1-0128-3-recon.gif">
+      </td>
+    </tr>
+
+    <tr><td align="center" class="hor-shift-left"><b>Pix3D</b></td></tr>
+    </tbody>
+  </table>
+
+  <br>
+  <center>
+    <span style="font-size:14px;" width="1000px"><i><b>P-VQ-VAE's Reconstruction.</b> Left: Ground-truth. Right: Reconstruction.</i></span>
+  </center>
+  <br><hr><br>
+
+  <table align="center" width="1800px">
+    <tbody>
+      <tr>
+        <td align="center"; width="1600x", class="hor-shift-left">
+        <!-- <td align="center"; width="1080px"> -->
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0001-0-tf.gif">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0003-0-tf.gif">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0004-0-tf.gif">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0059-0-tf.gif">
+        </td>
+      </tr>
+
+      <tr>
+        <td align="center"; width="1600x", class="hor-shift-left">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0106-0-tf.gif">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0111-0-tf.gif">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0141-0-tf.gif">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0188-0-tf.gif">
+        </td>
+      </tr>
+
+      <tr>
+        <td align="center"; width="1600x", class="hor-shift-left">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0202-0-tf.gif">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0236-0-tf.gif">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0312-0-tf.gif">
+          <img style="max-width: 180px; height: auto;" src="./tf_uncond/0319-0-tf.gif">
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <br>
+  <center>
+    <span style="font-size:14px;" width="1000px"><i><b>Autoregressive Generation with the Non-sequential Transformer.</b></i></span>
+  </center>
+  <br><hr><br>
+
+  <!-- <table align="center" width="1800px">
+    <tbody>
+      <tr>
+        <td align="center"; width="1600x", class="hor-shift-left">
+          <img style="max-width: 1024px; height: auto;" src="./shape_comp_baselines/shape_comp_baselines.png">
+        </td>
+      </tr>
+
+    </tbody>
+  </table> -->
+
+  <!-- <br> -->
+    <!-- <center>
+      <span style="font-size:14px;" width="1000px"><i><b>Shape Completion: More Comparisons with the Competing Methods.</b></i></span>
+    </center> -->
+  <!-- <br><hr><br> -->
+
+
+	<center>
+    <h1>Acknowledgements</h1>
+  </center>
+	  This webpage template was borrowed from <a href="https://richzhang.github.io/colorization/">here</a>.
+	<table align="center" width="900px">
+	  <tbody>
+      <tr>
+	    </tr>
+	  </tbody>
+  </table>
 
 </body></html>
