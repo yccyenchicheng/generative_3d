@@ -127,9 +127,17 @@
       display: table;
     }
 
+    .hor-shift-vid {
+      position: relative;
+      /*top: 50%;*/
+      /*transform: translateX(-20%);*/
+      transform: translateX(-5%);
+  }
+
     .hor-shift-left {
         position: relative;
         /*top: 50%;*/
+        /*transform: translateX(-20%);*/
         transform: translateX(-20%);
     }
     .hor-shift-mid {
@@ -243,27 +251,30 @@
 
   <br><br>
 
-  <table align="center" width="900px">
+  <!-- <table align="center" width="900px"> -->
+  <table align="center" width="1200px">
     <tbody><tr>
     
-    <td align="center">
+    <!-- <td align="center">
         <img src="./figs/generative3d_teaser.png" width="800px">
+    </td> -->
+    <td align="center">
+      <div style="display:inline-block;" class="hor-shift-vid">
+        <!-- <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-0-gtmix.png"> -->
+        <video  autoplay loop muted playsinline width="100%">
+          <source src="./teaser_video.mp4" type="video/mp4">
+        </video>
+        <i>
+          <b>Overview.</b> Our approach combines a non-sequential autoregressive prior for 3D shapes with task-specific conditionals <br>
+          to generate multiple plausible and high-quality shapes consistent with input conditioning. 
+          We show the efficacy of our approach across diverse tasks such as <br>
+          (Left) <b>shape completion</b>, (Middle) <b>single-view reconstruction</b> and (Right) <b>language-guided generation</b>. 
+        </i>
+      </div>
     </td>
-
     </tr></tbody>
   </table>
-  <center>
-    <br>
 
-    <span style="font-size:14px" width="1000px">
-      <i>
-        <b>Overview.</b> Our approach combines a non-sequential autoregressive prior for 3D shapes with task-specific conditionals <br>
-           to generate multiple plausible and high-quality shapes consistent with input conditioning. 
-           We show the efficacy of our approach across diverse tasks such as <br>
-           (Left) <b>shape completion</b>, (Middle) <b>single-view reconstruction</b> and (Right) <b>language-guided generation</b>. 
-      </i>
-    </span>
-  </center>
   <br><hr><br>
 
   <table align="center" width="1800px">
@@ -338,7 +349,7 @@
           <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/02958343-12410830e8a5067c69576518bd9bfe48-6-gen-4.gif">
         </td>
       </tr>
-
+<!-- 
       <tr>
         <td align="center"; width="1600x", class="hor-shift-left">
           <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/03001627-9b902b5c6570acb314b96b665a8ac321-5-comb.gif">
@@ -351,13 +362,53 @@
           <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/04530566-a7444ff7be7aad024c8ad92cfce1307c-6-gen-3.gif">
           <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/04530566-a7444ff7be7aad024c8ad92cfce1307c-6-gen-4.gif">
         </td>
+      </tr> -->
+
+      <tr>
+        <td align="center"; width="1600x", class="hor-shift-left">
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/03001627-9b902b5c6570acb314b96b665a8ac321-5-comb.gif">
+            <p>Input</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/03001627-9b902b5c6570acb314b96b665a8ac321-6-gen-0.gif">
+            <p>&nbsp;</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/03001627-9b902b5c6570acb314b96b665a8ac321-6-gen-2.gif">
+            <p>Multimodal Shape Completion</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/03001627-9b902b5c6570acb314b96b665a8ac321-6-gen-3.gif">
+            <p>&nbsp;</p>
+          </div>
+
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/04530566-a7444ff7be7aad024c8ad92cfce1307c-5-comb.gif">
+            <p>Input</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/04530566-a7444ff7be7aad024c8ad92cfce1307c-6-gen-0.gif">
+            <p>&nbsp;</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/04530566-a7444ff7be7aad024c8ad92cfce1307c-6-gen-3.gif">
+            <p>Multimodal Shape Completion</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./shape_comp_ours/quadrant/04530566-a7444ff7be7aad024c8ad92cfce1307c-6-gen-4.gif">
+            <p>&nbsp;</p>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
 
   <br>
   <center>
-    <span style="font-size:14px;" width="1000px"><i><b>Shape Completion: more results from the proposed method. "Red cuboid" denotes the missing region.</b></i></span>
+    <span style="font-size:14px;" width="1000px"><i><b>Shape Completion.</b></i> Given the partial inputs, the proposed approach is able to generate
+      diverse plausible 3D shapes consistent with the partial input. <br>
+      For example in row-5, a table like structure is reconstructed as an aeroplane. <span style="color: #a00000">Red cuboid</span>  denotes the missing region.</span>
   </center>
   <br><hr><br>
 
@@ -419,7 +470,7 @@
         </td>
       </tr>
 
-      <tr>
+      <!-- <tr>
         <td align="center"; width="1200x", class="hor-shift-left">
           <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-0-gtmix.png">
           <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-3-gt-x.gif">
@@ -428,14 +479,45 @@
           <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-4-gen-sdf_resnet-0.gif">
           <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-4-gen-pix2vox-0.gif">
         </td>
-      </tr>
+      </tr> -->
 
+      <tr>
+        <td align="center"; width="1200x", class="hor-shift-left">
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-0-gtmix.png">
+            <p>Input Image</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-3-gt-x.gif">
+            <p>Ground Truth</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-4-gen-rand_sdf_transformer-0.gif">
+            <p>Ours</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-4-gen-voxel_resnet-0.gif">
+            <p>ResNet2Voxel</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-4-gen-sdf_resnet-0.gif">
+            <p>ResNet2SDF</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_comp/bed-IKEA_LILLESAND-0722-4-gen-pix2vox-0.gif">
+            <p>Pix2Vox</p>
+          </div>
+        </td>
+      </tr>
+    
+      <!-- <tr><td align="center" class="hor-shift-left"><b>thin legs, thin arms</b></td><td align="center" class="hor-shift-left"><b>Stool, has a square floor mount</b></td><td align="center" class="hor-shift-left"><b>No holes in arms?</b></td></tr> -->
+    
     </tbody>
   </table>
-
   <br>
   <center>
-    <span style="font-size:14px;" width="1000px"><i><b>Single-view Reconstruction: more comparisons with the competing methods.</b></i></span>
+    <span style="font-size:14px;" width="1000px"><i><b>Single-view Reconstruction.</b></i> Given an image as input, 
+      we show the single-view reconstruction results with the proposed method and how it compares against other competing methods.</span>
   </center>
   <br><hr><br>
 
@@ -455,7 +537,7 @@
         </td>
       </tr>
 
-      <tr>
+      <!-- <tr>
         <td align="center"; width="1400x", class="hor-shift-left">
           <img style="max-width: 180px; height: auto;" src="./img2shape_ours/sofa-IKEA_SOLSTA_d053e745b565fa391c1b3b2ed8d13bf8-1627-0-gtmix.png">
           <img style="max-width: 180px; height: auto;" src="./img2shape_ours/sofa-IKEA_SOLSTA_d053e745b565fa391c1b3b2ed8d13bf8-1627-3-gen-0-0.gif">
@@ -467,6 +549,53 @@
           <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-3-gen-0-1.gif">
           <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-3-gen-0-2.gif">
         </td>
+      </tr> -->
+
+      <tr>
+        <td align="center"; width="1400x", class="hor-shift-left">
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_ours/sofa-IKEA_SOLSTA_d053e745b565fa391c1b3b2ed8d13bf8-1627-0-gtmix.png">
+            <p>Input Image</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_ours/sofa-IKEA_SOLSTA_d053e745b565fa391c1b3b2ed8d13bf8-1627-3-gen-0-0.gif">
+            <p>&nbsp;</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_ours/sofa-IKEA_SOLSTA_d053e745b565fa391c1b3b2ed8d13bf8-1627-3-gen-0-1.gif">
+            <p>Multimodal Shape Completion</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_ours/sofa-IKEA_SOLSTA_d053e745b565fa391c1b3b2ed8d13bf8-1627-3-gen-0-2.gif">
+            <p>&nbsp;</p>
+          </div>
+
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-0-gtmix.png">
+            <p>Input Image</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-3-gen-0-0.gif">
+            <p>&nbsp;</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-3-gen-0-1.gif">
+            <p>Multimodal Shape Completion</p>
+          </div>
+          <div style="display:inline-block;" class="img-with-text">
+            <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-3-gen-0-2.gif">
+            <p>&nbsp;</p>
+          </div>
+
+          <!-- <img style="max-width: 180px; height: auto;" src="./img2shape_ours/sofa-IKEA_SOLSTA_d053e745b565fa391c1b3b2ed8d13bf8-1627-3-gen-0-0.gif">
+          <img style="max-width: 180px; height: auto;" src="./img2shape_ours/sofa-IKEA_SOLSTA_d053e745b565fa391c1b3b2ed8d13bf8-1627-3-gen-0-1.gif">
+          <img style="max-width: 180px; height: auto;" src="./img2shape_ours/sofa-IKEA_SOLSTA_d053e745b565fa391c1b3b2ed8d13bf8-1627-3-gen-0-2.gif"> -->
+
+          <!-- <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-0-gtmix.png">
+          <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-3-gen-0-0.gif">
+          <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-3-gen-0-1.gif">
+          <img style="max-width: 180px; height: auto;" src="./img2shape_ours/bookcase-IKEA_LACK_1-0236-3-gen-0-2.gif"> -->
+        </td>
       </tr>
 
     </tbody>
@@ -474,7 +603,7 @@
 
   <br>
   <center>
-    <span style="font-size:14px;" width="1000px"><i><b>Single-view Reconstruction: more results from the proposed method.</b></i></span>
+    <span style="font-size:14px;" width="1000px"><i><b>Single-view Reconstruction.</b></i> We present more results from the proposed method.</span>
   </center>
   <br><hr><br>
 
@@ -541,7 +670,7 @@
 
   <br>
   <center>
-      <span style="font-size:14px;" width="1000px"><i><b>Language Conditioned Generation</b> Bold: Text Description. GIF: Three random samples generated by our approach.</i></span>
+      <span style="font-size:14px;" width="1000px"><i><b>Language-guided Generation.</b> Bold: Text Description. GIF: Three random samples generated by our approach.</i></span>
   </center>
 
 
@@ -673,12 +802,36 @@
       
     <tr>
       <td align="center"; width="1500x", class="hor-shift-left">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-2-x.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-3-recon.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-2-x.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-3-recon.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/sofa-IKEA_EKTORP_1-0128-2-x.gif">
-        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/sofa-IKEA_EKTORP_1-0128-3-recon.gif">
+        <div style="display:inline-block;" class="img-with-text">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-2-x.gif">
+          <p>Ground-truth</p>
+        </div>
+        <div style="display:inline-block;" class="img-with-text">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-3-recon.gif">
+          <p>Reconstruction</p>
+        </div>
+        <!-- <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-2-x.gif">
+        <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/chair-IKEA_FUSION-1870-3-recon.gif"> -->
+        <div style="display:inline-block;" class="img-with-text">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-2-x.gif">
+          <p>Ground-truth</p>
+        </div>
+        <div style="display:inline-block;" class="img-with-text">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-3-recon.gif">
+          <p>Reconstruction</p>
+        </div>
+        <!-- <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-2-x.gif"> -->
+        <!-- <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/bookcase-IKEA_LACK_2-0250-3-recon.gif"> -->
+        
+        <!-- <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/sofa-IKEA_EKTORP_1-0128-3-recon.gif"> -->
+        <div style="display:inline-block;" class="img-with-text">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/sofa-IKEA_EKTORP_1-0128-2-x.gif">
+          <p>Ground-truth</p>
+        </div>
+        <div style="display:inline-block;" class="img-with-text">
+          <img style="max-width: 180px; height: auto;" src="./pvqvae/pix3d/sofa-IKEA_EKTORP_1-0128-3-recon.gif">
+          <p>Reconstruction</p>
+        </div>
       </td>
     </tr>
 
